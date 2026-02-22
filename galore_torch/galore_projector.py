@@ -6,13 +6,14 @@ import bitsandbytes as bnb
 from .lion import Lion
 
 class GaLoreProjector:
-    def __init__(self, rank, verbose=False, update_proj_gap=200, scale=1.0, proj_type='std'):
+    def __init__(self, rank, verbose=False, update_proj_gap=200, scale=1.0, proj_type='std', lamb=0.1):
         self.rank = rank
         self.verbose = verbose
         self.update_proj_gap = update_proj_gap
         self.scale = scale
         self.ortho_matrix = None
         self.proj_type = proj_type
+        self.lamb = lamb
         
     def project(self, full_rank_grad, iter, name = None, update_proj_stepsize_ratio = 1.0):
         if self.proj_type == 'std':
@@ -83,7 +84,12 @@ class GaLoreProjector:
                         self.ortho_matrix.grad = None 
                         projection = self.ortho_matrix.t() @ self.ortho_matrix
                         normalized_full_rank_grad = full_rank_grad/torch.norm(full_rank_grad)
-                        loss = torch.norm(normalized_full_rank_grad @ projection - normalized_full_rank_grad) ** 2
+                        
+                        recon_loss = torch.norm(normalized_full_rank_grad @ projection - normalized_full_rank_grad) ** 2
+                        identity = torch.eye(self.rank, device=self.ortho_matrix.device, dtype=self.ortho_matrix.dtype)
+                        ortho_penalty = self.lamb * torch.norm(self.ortho_matrix @ self.ortho_matrix.t() - identity) ** 2
+                        loss = recon_loss + ortho_penalty
+                        
                         loss.backward()
                         if name is not None:
                             wandb.log({name:wandb.Histogram(self.ortho_matrix.grad.cpu().float()), name+"_norm": torch.norm(self.ortho_matrix.grad).item(), name+'_proj_loss': loss.item()})
@@ -122,7 +128,12 @@ class GaLoreProjector:
                         self.ortho_matrix.grad = None
                         projection = self.ortho_matrix @ self.ortho_matrix.t()
                         normalized_full_rank_grad = full_rank_grad/torch.norm(full_rank_grad)
-                        loss = torch.norm(projection @ normalized_full_rank_grad - normalized_full_rank_grad) ** 2
+                        
+                        recon_loss = torch.norm(projection @ normalized_full_rank_grad - normalized_full_rank_grad) ** 2
+                        identity = torch.eye(self.rank, device=self.ortho_matrix.device, dtype=self.ortho_matrix.dtype)
+                        ortho_penalty = self.lamb * torch.norm(self.ortho_matrix.t() @ self.ortho_matrix - identity) ** 2
+                        loss = recon_loss + ortho_penalty
+                        
                         loss.backward()
                         if name is not None:
                             wandb.log({name:wandb.Histogram(self.ortho_matrix.grad.cpu().float()), name+"_norm": torch.norm(self.ortho_matrix.grad).item(), name+'_proj_loss': loss.item()})
@@ -165,8 +176,6 @@ class GaLoreProjector:
             self.ortho_matrix.grad = None
         return full_rank_grad * self.scale
         
-        
-    # svd decomposition
     def get_orthogonal_matrix(self, weights, rank, type):
         module_params = weights
 
@@ -181,7 +190,6 @@ class GaLoreProjector:
             
         U, s, Vh = torch.linalg.svd(matrix, full_matrices = False)
         
-        #make the smaller matrix always to be orthogonal matrix
         if type=='right':
             A = U[:, :rank] @ torch.diag(s[:rank])
             B = Vh[:rank, :]
@@ -204,6 +212,3 @@ class GaLoreProjector:
             return [A, B]
         else:
             raise ValueError('type should be left, right or full')
-
-
-

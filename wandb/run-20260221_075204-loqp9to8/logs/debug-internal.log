@@ -1,0 +1,9 @@
+{"time":"2026-02-21T07:52:05.270545862Z","level":"INFO","msg":"stream: starting","core version":"0.22.2"}
+{"time":"2026-02-21T07:52:05.85025495Z","level":"INFO","msg":"stream: created new stream","id":"loqp9to8"}
+{"time":"2026-02-21T07:52:05.850513048Z","level":"INFO","msg":"handler: started","stream_id":"loqp9to8"}
+{"time":"2026-02-21T07:52:05.88554112Z","level":"INFO","msg":"stream: started","id":"loqp9to8"}
+{"time":"2026-02-21T07:52:05.885632376Z","level":"INFO","msg":"writer: started","stream_id":"loqp9to8"}
+{"time":"2026-02-21T07:52:05.885732296Z","level":"INFO","msg":"sender: started","stream_id":"loqp9to8"}
+{"time":"2026-02-21T07:52:06.598408756Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":38}
+{"time":"2026-02-21T07:52:06.815832184Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2026-02-21T10:36:31.165617847Z","level":"INFO","msg":"stream: closing","id":"loqp9to8"}

@@ -1,0 +1,345 @@
+[32m2026-02-21 07:52:06.564[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m166[0m - [1mUsing dist with rank 0 (only rank 0 will log)[0m
+[32m2026-02-21 07:52:06.566[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m167[0m - [1m****************************************[0m
+[32m2026-02-21 07:52:06.567[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m168[0m - [1mStarting training with the arguments[0m
+[32m2026-02-21 07:52:06.568[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mmodel_config                   configs/llama_350m.json[0m
+[32m2026-02-21 07:52:06.569[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1muse_hf_model                   False[0m
+[32m2026-02-21 07:52:06.570[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mcontinue_from                  None[0m
+[32m2026-02-21 07:52:06.571[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mbatch_size                     128[0m
+[32m2026-02-21 07:52:06.572[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mgradient_accumulation          1[0m
+[32m2026-02-21 07:52:06.573[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mtotal_batch_size               512[0m
+[32m2026-02-21 07:52:06.574[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mmax_length                     256[0m
+[32m2026-02-21 07:52:06.575[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1moptimizer                      galore_adamw[0m
+[32m2026-02-21 07:52:06.576[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mlr                             0.01[0m
+[32m2026-02-21 07:52:06.577[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mscheduler                      cosine[0m
+[32m2026-02-21 07:52:06.578[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mmin_lr_ratio                   0.1[0m
+[32m2026-02-21 07:52:06.579[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mactivation_checkpointing       False[0m
+[32m2026-02-21 07:52:06.580[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mweight_decay                   0.0[0m
+[32m2026-02-21 07:52:06.581[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mwarmup_steps                   6000[0m
+[32m2026-02-21 07:52:06.582[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1meval_every                     1000[0m
+[32m2026-02-21 07:52:06.583[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mnum_training_steps             60000[0m
+[32m2026-02-21 07:52:06.584[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mmax_train_tokens               None[0m
+[32m2026-02-21 07:52:06.585[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1msave_every                     20000[0m
+[32m2026-02-21 07:52:06.586[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1msave_dir                       /data/checkpoint/OSD_350M[0m
+[32m2026-02-21 07:52:06.587[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mtags                           None[0m
+[32m2026-02-21 07:52:06.588[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mdtype                          bfloat16[0m
+[32m2026-02-21 07:52:06.589[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1muse_torch_compile              True[0m
+[32m2026-02-21 07:52:06.590[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mworkers                        8[0m
+[32m2026-02-21 07:52:06.592[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mseed                           777[0m
+[32m2026-02-21 07:52:06.593[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mname                           OSD_350M[0m
+[32m2026-02-21 07:52:06.594[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mgrad_clipping                  0.0[0m
+[32m2026-02-21 07:52:06.595[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mbeta1                          0.0[0m
+[32m2026-02-21 07:52:06.596[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mrank                           256[0m
+[32m2026-02-21 07:52:06.597[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mupdate_proj_gap                200[0m
+[32m2026-02-21 07:52:06.598[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mgalore_scale                   0.25[0m
+[32m2026-02-21 07:52:06.599[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mproj_type                      continuous[0m
+[32m2026-02-21 07:52:06.600[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mlog_details                    False[0m
+[32m2026-02-21 07:52:06.601[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1msingle_gpu                     False[0m
+[32m2026-02-21 07:52:06.602[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m171[0m - [1m****************************************[0m
+Resolving data files: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 22705.95it/s]
+Resolving data files: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24289.37it/s]
+[32m2026-02-21 07:52:13.908[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m177[0m - [1mShuffling data with seed 42[0m
+/opt/conda/envs/galore/lib/python3.11/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+[32m2026-02-21 07:52:20.057[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m252[0m - [1mCompiling model with torch.compile() (this may take a while)...[0m
+[32m2026-02-21 07:52:20.090[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m254[0m - [1mModel compiled successfully[0m
+[34m[1mwandb[0m: [33mWARNING[0m Saving files without folders. If you want to preserve subdirectories pass base_path to wandb.save, i.e. wandb.save("/mnt/folder/file.h5", base_path="/mnt")
+Update steps:   0%|                                   | 0/60000 [00:00<?, ?it/s]
+enable GaLore for weights in module:  _orig_mod.model.layers.0.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.mlp.up_proj
+OptimizedModule(
+  (_orig_mod): LlamaForCausalLM(
+    (model): LlamaModel(
+      (embed_tokens): Embedding(32000, 1024, padding_idx=31999)
+      (layers): ModuleList(
+        (0-23): 24 x LlamaDecoderLayer(
+          (self_attn): LlamaAttention(
+            (q_proj): Linear(in_features=1024, out_features=1024, bias=False)
+            (k_proj): Linear(in_features=1024, out_features=1024, bias=False)
+            (v_proj): Linear(in_features=1024, out_features=1024, bias=False)
+            (o_proj): Linear(in_features=1024, out_features=1024, bias=False)
+            (rotary_emb): LlamaRotaryEmbedding()
+          )
+          (mlp): LlamaMLP(
+            (gate_proj): Linear(in_features=1024, out_features=2736, bias=False)
+            (down_proj): Linear(in_features=2736, out_features=1024, bias=False)
+            (up_proj): Linear(in_features=1024, out_features=2736, bias=False)
+            (act_fn): SiLUActivation()
+          )
+          (input_layernorm): LlamaRMSNorm()
+          (post_attention_layernorm): LlamaRMSNorm()
+        )
+      )
+      (norm): LlamaRMSNorm()
+    )
+    (lm_head): Linear(in_features=1024, out_features=32000, bias=False)
+  )
+)
+[0m
+[32m2026-02-21 07:52:20.569[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m307[0m - [1mTotal params: 367.97M[0m
+[32m2026-02-21 07:52:20.572[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m308[0m - [1mTrainable params: 367.97M[0m
+[32m2026-02-21 07:52:20.572[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m310[0m - [1mTotal params with GaLore enabled: 302.38M[0m
+[32m2026-02-21 07:52:20.573[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m311[0m - [1mSaving model to /data/checkpoint/OSD_350M every 20000 update steps[0m
+/workspace/Online-Subspace-Descent/galore_torch/adamw.py:48: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Update steps:   2%|▎                    | 1000/60000 [23:10<21:34:38,  1.32s/it][32m2026-02-21 08:15:31.195[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 1000[0m
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 22794.77it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24639.11it/s]
+[32m2026-02-21 08:15:33.819[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.62 seconds[0m   | 0/1024 [00:00<?, ?it/s]
+[32m2026-02-21 08:15:33.823[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.63 seconds[0m
+[32m2026-02-21 08:16:38.855[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 1000: 4.5684744119644165[0m
+Update steps:   3%|▋                    | 2000/60000 [46:16<21:15:56,  1.32s/it][32m2026-02-21 08:38:37.450[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 2000[0m
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24029.27it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24929.14it/s]
+[32m2026-02-21 08:38:40.049[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.60 seconds[0m   | 0/1024 [00:00<?, ?it/s]
+[32m2026-02-21 08:38:40.053[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.60 seconds[0m
+[32m2026-02-21 08:39:22.788[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 2000: 3.9095436930656433[0m
+Update steps:   5%|▉                  | 3000/60000 [1:09:00<20:51:23,  1.32s/it][32m2026-02-21 09:01:21.575[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 3000[0m
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23418.20it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24459.93it/s]
+[32m2026-02-21 09:01:24.169[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.59 seconds[0m   | 0/1024 [00:00<?, ?it/s]
+[32m2026-02-21 09:01:24.173[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.60 seconds[0m
+[32m2026-02-21 09:02:07.130[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 3000: 5.392463564872742[0m
+Update steps:   7%|█▎                 | 4000/60000 [1:31:46<20:43:26,  1.33s/it][32m2026-02-21 09:24:07.417[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 4000[0m
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23545.68it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 25167.84it/s]
+[32m2026-02-21 09:24:10.074[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.66 seconds[0m   | 0/1024 [00:00<?, ?it/s]
+[32m2026-02-21 09:24:10.077[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.66 seconds[0m
+[32m2026-02-21 09:24:52.300[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 4000: 4.673483848571777[0m
+Update steps:   8%|█▌                 | 5000/60000 [1:54:32<20:11:10,  1.32s/it][32m2026-02-21 09:46:53.743[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 5000[0m
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23815.55it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24804.46it/s]
+[32m2026-02-21 09:46:56.810[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 3.07 seconds[0m   | 0/1024 [00:00<?, ?it/s]
+[32m2026-02-21 09:46:56.814[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 3.07 seconds[0m
+[32m2026-02-21 09:47:39.671[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 5000: 4.287377715110779[0m
+Update steps:  10%|█▉                 | 6000/60000 [2:17:20<19:53:16,  1.33s/it][32m2026-02-21 10:09:41.373[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 6000[0m
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23653.05it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24819.80it/s]
+[32m2026-02-21 10:09:44.008[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.63 seconds[0m   | 0/1024 [00:00<?, ?it/s]
+[32m2026-02-21 10:09:44.012[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.64 seconds[0m
+[32m2026-02-21 10:10:26.865[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 6000: 3.906748056411743[0m
+Update steps:  12%|██▏                | 7000/60000 [2:40:07<19:27:27,  1.32s/it][32m2026-02-21 10:32:29.085[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 7000[0m
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23303.21it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24776.85it/s]
+[32m2026-02-21 10:32:31.557[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.47 seconds[0m   | 0/1024 [00:00<?, ?it/s]
+[32m2026-02-21 10:32:31.561[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.47 seconds[0m
+[32m2026-02-21 10:33:14.727[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 7000: 3.76371031999588[0m
+Update steps:  12%|██▎                | 7149/60000 [2:44:10<18:33:13,  1.26s/it]Traceback (most recent call last):
+  File "/workspace/Online-Subspace-Descent/torchrun_main.py", line 602, in <module>
+    main(args)
+  File "/workspace/Online-Subspace-Descent/torchrun_main.py", line 459, in main
+    optimizer.step()
+  File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/optim/lr_scheduler.py", line 133, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/optim/optimizer.py", line 517, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Online-Subspace-Descent/galore_torch/adamw.py", line 96, in step
+    grad = state["projector"].project(grad, state["step"], update_proj_stepsize_ratio = group["lr"]/self.init_lr, name = group["names"][i])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Online-Subspace-Descent/galore_torch/galore_projector.py", line 87, in project
+    loss.backward()
+  File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/_tensor.py", line 625, in backward
+    torch.autograd.backward(
+  File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/autograd/__init__.py", line 354, in backward
+    _engine_run_backward(
+  File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/workspace/Online-Subspace-Descent/torchrun_main.py", line 602, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/workspace/Online-Subspace-Descent/torchrun_main.py", line 459, in main
+[rank0]:     optimizer.step()
+[rank0]:   File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/optim/lr_scheduler.py", line 133, in wrapper
+[rank0]:     return func.__get__(opt, opt.__class__)(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/optim/optimizer.py", line 517, in wrapper
+[rank0]:     out = func(*args, **kwargs)
+[rank0]:           ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/workspace/Online-Subspace-Descent/galore_torch/adamw.py", line 96, in step
+[rank0]:     grad = state["projector"].project(grad, state["step"], update_proj_stepsize_ratio = group["lr"]/self.init_lr, name = group["names"][i])
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/workspace/Online-Subspace-Descent/galore_torch/galore_projector.py", line 87, in project
+[rank0]:     loss.backward()
+[rank0]:   File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/_tensor.py", line 625, in backward
+[rank0]:     torch.autograd.backward(
+[rank0]:   File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank0]:     _engine_run_backward(
+[rank0]:   File "/opt/conda/envs/galore/lib/python3.11/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: KeyboardInterrupt

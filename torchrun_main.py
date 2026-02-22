@@ -59,6 +59,8 @@ def parse_args(args):
     parser.add_argument("--save_dir", type=str, default=None)
     parser.add_argument("--tags", type=str, default=None)
     parser.add_argument("--dtype", type=str, default="bfloat16" if torch.cuda.is_bf16_supported() else "float32")
+    parser.add_argument("--use_torch_compile", action="store_true", default=False,
+                        help="Enable torch.compile() (requires PyTorch>=2.0). Compile before DDP wrapping.")
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--name", type=str, default="test")
@@ -72,6 +74,9 @@ def parse_args(args):
     parser.add_argument("--galore_scale", type=float, default=1.0)
     parser.add_argument("--proj_type", type=str, default="std")
     
+    # lamb for orthogonal projection penalty (수정됨)
+    parser.add_argument("--lamb", type=float, default=0.1)
+    
     parser.add_argument("--log_details", default=False, action="store_true")
     # disable ddp, single_gpu
     parser.add_argument("--single_gpu", default=False, action="store_true")
@@ -84,8 +89,8 @@ def parse_args(args):
 @torch.no_grad()
 def evaluate_model(model, preprocess_batched, pad_idx, global_rank, world_size, device, batch_size):
     _time = time.time()
-    val_data = datasets.load_dataset("c4", "en", split="validation", streaming=True) #DGX
-    val_data = val_data.shuffle(seed=42)
+    val_data = datasets.load_dataset("allenai/c4", "en", split="validation", streaming=True) #DGX
+    val_data = val_data.shuffle(seed=777)
     logger.info(f"Loaded validation dataset in {time.time() - _time:.2f} seconds")
 
     if not args.single_gpu:
@@ -159,7 +164,7 @@ def main(args):
             
     # initialize wandb without config (it is passed later)
     if global_rank == 0:
-        wandb.init(project="galore-c4")
+        wandb.init(project="galore dora test(251120)")
         
     logger.info(f"Using dist with rank {global_rank} (only rank 0 will log)")
     logger.info("*" * 40)
@@ -170,7 +175,7 @@ def main(args):
 
     data = datasets.load_dataset("allenai/c4", "en", split="train", streaming=True)
 
-    seed_for_shuffle = 42 
+    seed_for_shuffle = 777 
     
     logger.info(f"Shuffling data with seed {seed_for_shuffle}")
     data: datasets.Dataset = data.shuffle(seed=seed_for_shuffle)
@@ -241,6 +246,20 @@ def main(args):
     else:
         model = model.to(device=device)
 
+    # Optionally compile the model with torch.compile (PyTorch 2.x).
+    # Compile before wrapping with DistributedDataParallel to avoid issues.
+    if getattr(args, "use_torch_compile", False):
+        compile_fn = getattr(torch, "compile", None)
+        if compile_fn is not None:
+            try:
+                logger.info("Compiling model with torch.compile() (this may take a while)...")
+                model = compile_fn(model)
+                logger.info("Model compiled successfully")
+            except Exception as e:
+                logger.warning(f"torch.compile failed: {e}. Continuing without compilation.")
+        else:
+            logger.warning("torch.compile not available in this PyTorch build; skipping compilation.")
+
     n_total_params = sum(p.numel() for p in model.parameters())
     trainable_params = [p for p in model.parameters() if p.requires_grad]
     # Initialize wandb
@@ -282,9 +301,9 @@ def main(args):
         id_galore_params = [id(p) for p in galore_params]
         # make parameters without "rank" to another group
         regular_params = [p for p in model.parameters() if id(p) not in id_galore_params]
-        # then call galore_adamw
+        # then call galore_adamw (수정됨: lamb 파라미터 추가)
         param_groups = [{'params': regular_params}, 
-                {'params': galore_params, 'rank': args.rank, 'update_proj_gap': args.update_proj_gap, 'scale': args.galore_scale, 'proj_type': args.proj_type, 'names': galore_param_names}]
+                {'params': galore_params, 'rank': args.rank, 'update_proj_gap': args.update_proj_gap, 'scale': args.galore_scale, 'proj_type': args.proj_type, 'lamb': args.lamb, 'names': galore_param_names}]
         
     # print params and trainable params
     logger.info(f"\n{model}\n")
@@ -346,7 +365,8 @@ def main(args):
                 if id(p) in id_galore_params:
                     if not args.log_details:
                         p_name = None
-                    optimizer_dict[p] = GaLoreAdamW8bit([{'params': [p], 'rank': args.rank, 'update_proj_gap': args.update_proj_gap * 2, 'scale': args.galore_scale, 'proj_type': args.proj_type, 'names': [p_name]}], lr=args.lr, weight_decay=args.weight_decay)
+                    # (수정됨: lamb 파라미터 추가)
+                    optimizer_dict[p] = GaLoreAdamW8bit([{'params': [p], 'rank': args.rank, 'update_proj_gap': args.update_proj_gap * 2, 'scale': args.galore_scale, 'proj_type': args.proj_type, 'lamb': args.lamb, 'names': [p_name]}], lr=args.lr, weight_decay=args.weight_decay)
                 else:
                     optimizer_dict[p] = bnb.optim.Adam8bit([p], lr=args.lr, weight_decay=args.weight_decay)
 

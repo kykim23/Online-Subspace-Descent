@@ -1,0 +1,510 @@
+[32m2026-02-21 11:50:28.968[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m166[0m - [1mUsing dist with rank 0 (only rank 0 will log)[0m
+[32m2026-02-21 11:50:28.969[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m167[0m - [1m****************************************[0m
+[32m2026-02-21 11:50:28.970[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m168[0m - [1mStarting training with the arguments[0m
+[32m2026-02-21 11:50:28.970[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mmodel_config                   configs/llama_350m.json[0m
+[32m2026-02-21 11:50:28.970[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1muse_hf_model                   False[0m
+[32m2026-02-21 11:50:28.971[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mcontinue_from                  None[0m
+[32m2026-02-21 11:50:28.971[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mbatch_size                     128[0m
+[32m2026-02-21 11:50:28.971[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mgradient_accumulation          1[0m
+[32m2026-02-21 11:50:28.972[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mtotal_batch_size               512[0m
+[32m2026-02-21 11:50:28.972[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mmax_length                     256[0m
+[32m2026-02-21 11:50:28.972[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1moptimizer                      galore_adamw[0m
+[32m2026-02-21 11:50:28.973[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mlr                             0.001[0m
+[32m2026-02-21 11:50:28.973[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mscheduler                      cosine[0m
+[32m2026-02-21 11:50:28.973[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mmin_lr_ratio                   0.1[0m
+[32m2026-02-21 11:50:28.974[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mactivation_checkpointing       False[0m
+[32m2026-02-21 11:50:28.974[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mweight_decay                   0.0[0m
+[32m2026-02-21 11:50:28.974[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mwarmup_steps                   6000[0m
+[32m2026-02-21 11:50:28.975[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1meval_every                     1000[0m
+[32m2026-02-21 11:50:28.975[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mnum_training_steps             60000[0m
+[32m2026-02-21 11:50:28.976[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mmax_train_tokens               None[0m
+[32m2026-02-21 11:50:28.976[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1msave_every                     20000[0m
+[32m2026-02-21 11:50:28.976[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1msave_dir                       /data/checkpoint/OSD_350M[0m
+[32m2026-02-21 11:50:28.977[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mtags                           None[0m
+[32m2026-02-21 11:50:28.977[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mdtype                          bfloat16[0m
+[32m2026-02-21 11:50:28.977[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1muse_torch_compile              True[0m
+[32m2026-02-21 11:50:28.978[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mworkers                        8[0m
+[32m2026-02-21 11:50:28.978[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mseed                           777[0m
+[32m2026-02-21 11:50:28.978[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mname                           OSD_350M[0m
+[32m2026-02-21 11:50:28.979[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mgrad_clipping                  1.0[0m
+[32m2026-02-21 11:50:28.979[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mbeta1                          0.0[0m
+[32m2026-02-21 11:50:28.979[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mrank                           256[0m
+[32m2026-02-21 11:50:28.980[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mupdate_proj_gap                200[0m
+[32m2026-02-21 11:50:28.980[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mgalore_scale                   0.25[0m
+[32m2026-02-21 11:50:28.980[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mproj_type                      continuous[0m
+[32m2026-02-21 11:50:28.981[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1mlog_details                    False[0m
+[32m2026-02-21 11:50:28.981[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m170[0m - [1msingle_gpu                     False[0m
+[32m2026-02-21 11:50:28.981[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m171[0m - [1m****************************************[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23676.65it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24286.89it/s]
+[32m2026-02-21 11:50:35.564[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m177[0m - [1mShuffling data with seed 777[0m
+/opt/conda/envs/galore/lib/python3.11/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+[32m2026-02-21 11:50:41.697[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m252[0m - [1mCompiling model with torch.compile() (this may take a while)...[0m
+[32m2026-02-21 11:50:41.727[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m254[0m - [1mModel compiled successfully[0m
+[34m[1mwandb[0m: [33mWARNING[0m Saving files without folders. If you want to preserve subdirectories pass base_path to wandb.save, i.e. wandb.save("/mnt/folder/file.h5", base_path="/mnt")
+Update steps:   0%|                                   | 0/60000 [00:00<?, ?it/s]
+enable GaLore for weights in module:  _orig_mod.model.layers.0.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.0.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.1.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.2.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.3.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.4.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.5.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.6.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.7.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.8.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.9.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.10.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.11.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.12.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.13.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.14.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.15.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.16.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.17.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.18.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.19.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.20.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.21.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.22.mlp.up_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.self_attn.q_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.self_attn.k_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.self_attn.v_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.self_attn.o_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.mlp.gate_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.mlp.down_proj
+enable GaLore for weights in module:  _orig_mod.model.layers.23.mlp.up_proj
+OptimizedModule(
+  (_orig_mod): LlamaForCausalLM(
+    (model): LlamaModel(
+      (embed_tokens): Embedding(32000, 1024, padding_idx=31999)
+      (layers): ModuleList(
+        (0-23): 24 x LlamaDecoderLayer(
+          (self_attn): LlamaAttention(
+            (q_proj): Linear(in_features=1024, out_features=1024, bias=False)
+            (k_proj): Linear(in_features=1024, out_features=1024, bias=False)
+            (v_proj): Linear(in_features=1024, out_features=1024, bias=False)
+            (o_proj): Linear(in_features=1024, out_features=1024, bias=False)
+            (rotary_emb): LlamaRotaryEmbedding()
+          )
+          (mlp): LlamaMLP(
+            (gate_proj): Linear(in_features=1024, out_features=2736, bias=False)
+            (down_proj): Linear(in_features=2736, out_features=1024, bias=False)
+            (up_proj): Linear(in_features=1024, out_features=2736, bias=False)
+            (act_fn): SiLUActivation()
+          )
+          (input_layernorm): LlamaRMSNorm()
+          (post_attention_layernorm): LlamaRMSNorm()
+        )
+      )
+      (norm): LlamaRMSNorm()
+    )
+    (lm_head): Linear(in_features=1024, out_features=32000, bias=False)
+  )
+)
+[0m
+[32m2026-02-21 11:50:42.083[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m307[0m - [1mTotal params: 367.97M[0m
+[32m2026-02-21 11:50:42.086[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m308[0m - [1mTrainable params: 367.97M[0m
+[32m2026-02-21 11:50:42.086[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m310[0m - [1mTotal params with GaLore enabled: 302.38M[0m
+[32m2026-02-21 11:50:42.087[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m311[0m - [1mSaving model to /data/checkpoint/OSD_350M every 20000 update steps[0m
+/workspace/Online-Subspace-Descent/galore_torch/adamw.py:48: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Update steps:   2%|▎                    | 1000/60000 [22:52<21:52:44,  1.33s/it][32m2026-02-21 12:13:35.526[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 1000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23315.60it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24162.15it/s]
+[32m2026-02-21 12:13:38.169[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.64 seconds[0ms]
+[32m2026-02-21 12:13:38.173[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.65 seconds[0m
+[32m2026-02-21 12:14:34.089[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 1000: 5.982906103134155[0m
+Update steps:   3%|▋                    | 2000/60000 [45:53<21:23:03,  1.33s/it][32m2026-02-21 12:36:36.259[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 2000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23410.03it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23880.70it/s]
+[32m2026-02-21 12:36:38.865[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.60 seconds[0ms]
+[32m2026-02-21 12:36:38.870[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.61 seconds[0m
+[32m2026-02-21 12:37:20.655[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 2000: 5.253605365753174[0m
+Update steps:   5%|▉                  | 3000/60000 [1:08:46<21:38:01,  1.37s/it][32m2026-02-21 12:59:28.851[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 3000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23019.19it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24024.97it/s]
+[32m2026-02-21 12:59:31.358[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.51 seconds[0ms]
+[32m2026-02-21 12:59:31.362[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.51 seconds[0m
+[32m2026-02-21 13:00:13.536[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 3000: 4.968814492225647[0m
+Update steps:   7%|█▎                 | 4000/60000 [1:31:33<20:43:39,  1.33s/it][32m2026-02-21 13:22:16.386[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 4000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23329.66it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23799.71it/s]
+[32m2026-02-21 13:22:19.002[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.61 seconds[0ms]
+[32m2026-02-21 13:22:19.005[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.62 seconds[0m
+[32m2026-02-21 13:23:01.214[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 4000: 4.751449227333069[0m
+Update steps:   8%|█▌                 | 5000/60000 [1:54:26<19:43:10,  1.29s/it][32m2026-02-21 13:45:09.089[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 5000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 21627.42it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23979.36it/s]
+[32m2026-02-21 13:45:11.813[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.72 seconds[0ms]
+[32m2026-02-21 13:45:11.817[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.73 seconds[0m
+[32m2026-02-21 13:45:54.676[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 5000: 4.528386354446411[0m
+Update steps:  10%|█▉                 | 6000/60000 [2:17:20<19:59:28,  1.33s/it][32m2026-02-21 14:08:03.269[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 6000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23163.95it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23827.70it/s]
+[32m2026-02-21 14:08:05.851[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.58 seconds[0ms]
+[32m2026-02-21 14:08:05.855[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.58 seconds[0m
+[32m2026-02-21 14:08:48.153[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 6000: 5.929259777069092[0m
+Update steps:  12%|██▏                | 7000/60000 [2:40:12<19:36:52,  1.33s/it][32m2026-02-21 14:30:55.431[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 7000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23450.29it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23783.11it/s]
+[32m2026-02-21 14:30:58.034[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.60 seconds[0ms]
+[32m2026-02-21 14:30:58.038[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.61 seconds[0m
+[32m2026-02-21 14:31:40.051[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 7000: 4.351202368736267[0m
+Update steps:  13%|██▌                | 8000/60000 [3:03:05<19:20:03,  1.34s/it][32m2026-02-21 14:53:48.100[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 8000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23161.83it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24135.13it/s]
+[32m2026-02-21 14:53:50.702[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.60 seconds[0ms]
+[32m2026-02-21 14:53:50.706[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.60 seconds[0m
+[32m2026-02-21 14:54:32.617[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 8000: 4.0686105489730835[0m
+Update steps:  15%|██▊                | 9000/60000 [3:25:57<18:50:03,  1.33s/it][32m2026-02-21 15:16:40.153[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 9000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 22996.15it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23917.80it/s]
+[32m2026-02-21 15:16:42.609[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.45 seconds[0ms]
+[32m2026-02-21 15:16:42.613[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.46 seconds[0m
+[32m2026-02-21 15:17:24.341[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 9000: 3.928136706352234[0m
+Update steps:  17%|███               | 10000/60000 [3:48:50<18:23:52,  1.32s/it][32m2026-02-21 15:39:32.742[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 10000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23193.60it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23942.73it/s]
+[32m2026-02-21 15:39:35.281[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.54 seconds[0ms]
+[32m2026-02-21 15:39:35.285[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.54 seconds[0m
+[32m2026-02-21 15:40:17.641[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 10000: 3.845893144607544[0m
+Update steps:  18%|███▎              | 11000/60000 [4:11:41<18:21:44,  1.35s/it][32m2026-02-21 16:02:24.361[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 11000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23250.73it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23866.50it/s]
+[32m2026-02-21 16:02:26.963[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.60 seconds[0ms]
+[32m2026-02-21 16:02:26.967[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.60 seconds[0m
+[32m2026-02-21 16:03:08.633[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 11000: 3.794132113456726[0m
+Update steps:  20%|███▌              | 12000/60000 [4:34:33<17:42:49,  1.33s/it][32m2026-02-21 16:25:16.476[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 12000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23473.61it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 22509.60it/s]
+[32m2026-02-21 16:25:19.491[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 3.01 seconds[0ms]
+[32m2026-02-21 16:25:19.495[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 3.02 seconds[0m
+[32m2026-02-21 16:26:00.850[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 12000: 3.754529654979706[0m
+Update steps:  22%|███▉              | 13000/60000 [4:57:24<17:23:02,  1.33s/it][32m2026-02-21 16:48:07.569[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 13000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23511.39it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24268.23it/s]
+[32m2026-02-21 16:48:10.157[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.59 seconds[0ms]
+[32m2026-02-21 16:48:10.161[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.59 seconds[0m
+[32m2026-02-21 16:48:51.518[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 13000: 3.7201253175735474[0m
+Update steps:  23%|████▏             | 14000/60000 [5:20:17<17:00:38,  1.33s/it][32m2026-02-21 17:11:00.121[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 14000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23401.23it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23820.04it/s]
+[32m2026-02-21 17:11:02.954[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.83 seconds[0ms]
+[32m2026-02-21 17:11:02.958[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.84 seconds[0m
+[32m2026-02-21 17:11:45.484[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 14000: 3.694224715232849[0m
+Update steps:  25%|████▌             | 15000/60000 [5:43:10<16:26:47,  1.32s/it][32m2026-02-21 17:33:53.043[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 15000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23204.50it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23797.73it/s]
+[32m2026-02-21 17:33:55.650[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.61 seconds[0ms]
+[32m2026-02-21 17:33:55.654[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.61 seconds[0m
+[32m2026-02-21 17:34:37.756[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 15000: 3.6722867488861084[0m
+Update steps:  27%|████▊             | 16000/60000 [6:06:02<16:26:56,  1.35s/it][32m2026-02-21 17:56:44.899[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 16000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23499.94it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24052.82it/s]
+[32m2026-02-21 17:56:47.448[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.55 seconds[0ms]
+[32m2026-02-21 17:56:47.452[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.55 seconds[0m
+[32m2026-02-21 17:57:29.868[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 16000: 3.6554325222969055[0m
+Update steps:  28%|█████             | 17000/60000 [6:28:55<15:47:54,  1.32s/it][32m2026-02-21 18:19:38.218[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 17000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23226.33it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23652.52it/s]
+[32m2026-02-21 18:19:40.936[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.72 seconds[0ms]
+[32m2026-02-21 18:19:40.940[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.72 seconds[0m
+[32m2026-02-21 18:20:22.807[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 17000: 3.6378426551818848[0m
+Update steps:  30%|█████▍            | 18000/60000 [6:51:47<15:35:28,  1.34s/it][32m2026-02-21 18:42:30.572[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 18000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23554.07it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23791.67it/s]
+[32m2026-02-21 18:42:33.152[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.58 seconds[0ms]
+[32m2026-02-21 18:42:33.155[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.58 seconds[0m
+[32m2026-02-21 18:43:14.729[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 18000: 3.622062563896179[0m
+Update steps:  32%|█████▋            | 19000/60000 [7:14:39<15:07:04,  1.33s/it][32m2026-02-21 19:05:21.848[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 19000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23287.92it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23815.42it/s]
+[32m2026-02-21 19:05:24.522[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.67 seconds[0ms]
+[32m2026-02-21 19:05:24.526[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.68 seconds[0m
+[32m2026-02-21 19:06:06.491[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 19000: 3.611672818660736[0m
+Update steps:  33%|██████            | 20000/60000 [7:37:29<14:39:01,  1.32s/it][32m2026-02-21 19:28:12.612[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m469[0m - [1mSaving model and optimizer to /data/checkpoint/OSD_350M/model_20000, update step 20000[0m
+[32m2026-02-21 19:31:21.903[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 20000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23432.89it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24238.10it/s]
+[32m2026-02-21 19:31:24.556[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.65 seconds[0ms]
+[32m2026-02-21 19:31:24.578[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.67 seconds[0m
+[32m2026-02-21 19:32:02.494[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 20000: 3.600167155265808[0m
+Update steps:  35%|██████▎           | 21000/60000 [8:03:25<14:06:28,  1.30s/it][32m2026-02-21 19:54:07.812[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 21000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23470.15it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23534.20it/s]
+[32m2026-02-21 19:54:10.746[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.93 seconds[0ms]
+[32m2026-02-21 19:54:10.750[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.94 seconds[0m
+[32m2026-02-21 19:54:52.768[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 21000: 3.5910415649414062[0m
+Update steps:  37%|██████▌           | 22000/60000 [8:26:17<14:01:04,  1.33s/it][32m2026-02-21 20:17:00.111[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 22000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23212.28it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23726.87it/s]
+[32m2026-02-21 20:17:02.658[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.54 seconds[0ms]
+[32m2026-02-21 20:17:02.661[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.55 seconds[0m
+[32m2026-02-21 20:17:43.752[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 22000: 3.582654654979706[0m
+Update steps:  38%|██████▉           | 23000/60000 [8:49:07<13:40:15,  1.33s/it][32m2026-02-21 20:39:50.018[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 23000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23099.05it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23957.16it/s]
+[32m2026-02-21 20:39:52.618[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.60 seconds[0ms]
+[32m2026-02-21 20:39:52.622[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.60 seconds[0m
+[32m2026-02-21 20:40:34.326[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 23000: 3.5769969820976257[0m
+Update steps:  40%|███████▏          | 24000/60000 [9:11:58<13:24:03,  1.34s/it][32m2026-02-21 21:02:41.307[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 24000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23476.31it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24111.83it/s]
+[32m2026-02-21 21:02:43.864[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.56 seconds[0ms]
+[32m2026-02-21 21:02:43.868[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.56 seconds[0m
+[32m2026-02-21 21:03:25.222[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 24000: 3.5669917464256287[0m
+Update steps:  42%|███████▌          | 25000/60000 [9:34:50<12:50:55,  1.32s/it][32m2026-02-21 21:25:33.266[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 25000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23164.70it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23619.75it/s]
+[32m2026-02-21 21:25:35.861[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.59 seconds[0ms]
+[32m2026-02-21 21:25:35.865[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.60 seconds[0m
+[32m2026-02-21 21:26:17.795[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 25000: 3.5616036653518677[0m
+Update steps:  43%|███████▊          | 26000/60000 [9:57:42<12:42:52,  1.35s/it][32m2026-02-21 21:48:24.659[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 26000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23128.03it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24095.73it/s]
+[32m2026-02-21 21:48:27.337[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.68 seconds[0ms]
+[32m2026-02-21 21:48:27.341[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.68 seconds[0m
+[32m2026-02-21 21:49:08.482[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 26000: 3.5560214519500732[0m
+Update steps:  45%|███████▋         | 27000/60000 [10:20:31<12:18:39,  1.34s/it][32m2026-02-21 22:11:14.433[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 27000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23297.90it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23767.84it/s]
+[32m2026-02-21 22:11:17.030[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.60 seconds[0ms]
+[32m2026-02-21 22:11:17.034[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.60 seconds[0m
+[32m2026-02-21 22:11:58.570[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 27000: 3.5510584712028503[0m
+Update steps:  47%|███████▉         | 28000/60000 [10:43:22<11:54:30,  1.34s/it][32m2026-02-21 22:34:05.028[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 28000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23413.60it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24254.25it/s]
+[32m2026-02-21 22:34:07.645[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.62 seconds[0ms]
+[32m2026-02-21 22:34:07.649[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.62 seconds[0m
+[32m2026-02-21 22:34:50.116[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 28000: 3.546055555343628[0m
+Update steps:  48%|████████▏        | 29000/60000 [11:06:14<11:00:41,  1.28s/it][32m2026-02-21 22:56:56.767[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 29000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23472.20it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24013.55it/s]
+[32m2026-02-21 22:56:59.282[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.51 seconds[0ms]
+[32m2026-02-21 22:56:59.286[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.52 seconds[0m
+[32m2026-02-21 22:57:41.690[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 29000: 3.5422836542129517[0m
+Update steps:  50%|████████▌        | 30000/60000 [11:29:07<11:12:46,  1.35s/it][32m2026-02-21 23:19:50.437[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 30000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23444.14it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23160.70it/s]
+[32m2026-02-21 23:19:52.973[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.53 seconds[0ms]
+[32m2026-02-21 23:19:52.977[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.54 seconds[0m
+[32m2026-02-21 23:20:34.828[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 30000: 3.537359297275543[0m
+Update steps:  52%|████████▊        | 31000/60000 [11:51:58<10:37:18,  1.32s/it][32m2026-02-21 23:42:41.630[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 31000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23106.50it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23570.36it/s]
+[32m2026-02-21 23:42:44.208[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.58 seconds[0ms]
+[32m2026-02-21 23:42:44.213[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.58 seconds[0m
+[32m2026-02-21 23:43:26.549[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 31000: 3.534088134765625[0m
+Update steps:  53%|█████████        | 32000/60000 [12:14:51<10:28:57,  1.35s/it][32m2026-02-22 00:05:34.301[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 32000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23427.52it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23923.00it/s]
+[32m2026-02-22 00:05:36.896[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.59 seconds[0ms]
+[32m2026-02-22 00:05:36.899[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.60 seconds[0m
+[32m2026-02-22 00:06:18.023[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 32000: 3.531237840652466[0m
+Update steps:  55%|█████████▉        | 33000/60000 [12:37:42<9:47:20,  1.31s/it][32m2026-02-22 00:28:25.078[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 33000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23279.59it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24144.36it/s]
+[32m2026-02-22 00:28:27.602[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.52 seconds[0ms]
+[32m2026-02-22 00:28:27.606[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.53 seconds[0m
+[32m2026-02-22 00:29:09.751[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 33000: 3.52815979719162[0m
+Update steps:  57%|██████████▏       | 34000/60000 [13:00:32<9:41:44,  1.34s/it][32m2026-02-22 00:51:14.711[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 34000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23373.21it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24052.14it/s]
+[32m2026-02-22 00:51:17.232[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.52 seconds[0ms]
+[32m2026-02-22 00:51:17.236[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.52 seconds[0m
+[32m2026-02-22 00:51:58.626[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 34000: 3.524348258972168[0m
+Update steps:  58%|██████████▌       | 35000/60000 [13:23:23<9:11:39,  1.32s/it][32m2026-02-22 01:14:05.957[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 35000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23392.30it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23866.50it/s]
+[32m2026-02-22 01:14:08.590[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.63 seconds[0ms]
+[32m2026-02-22 01:14:08.594[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.64 seconds[0m
+[32m2026-02-22 01:14:49.933[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 35000: 3.522886276245117[0m
+Update steps:  60%|██████████▊       | 36000/60000 [13:46:12<8:46:54,  1.32s/it][32m2026-02-22 01:36:54.859[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 36000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 17623.78it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24185.55it/s]
+[32m2026-02-22 01:36:57.565[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.71 seconds[0ms]
+[32m2026-02-22 01:36:57.569[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.71 seconds[0m
+[32m2026-02-22 01:37:38.711[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 36000: 3.5209251642227173[0m
+Update steps:  62%|███████████       | 37000/60000 [14:09:03<8:26:28,  1.32s/it][32m2026-02-22 01:59:45.859[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 37000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23693.63it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23798.92it/s]
+[32m2026-02-22 01:59:48.725[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.87 seconds[0ms]
+[32m2026-02-22 01:59:48.729[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.87 seconds[0m
+[32m2026-02-22 02:00:30.089[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 37000: 3.5185397267341614[0m
+Update steps:  63%|███████████▍      | 38000/60000 [14:31:55<8:20:25,  1.36s/it][32m2026-02-22 02:22:37.766[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 38000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23926.19it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24320.04it/s]
+[32m2026-02-22 02:22:40.354[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.59 seconds[0ms]
+[32m2026-02-22 02:22:40.358[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.59 seconds[0m
+[32m2026-02-22 02:23:21.660[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 38000: 3.5167686343193054[0m
+Update steps:  65%|███████████▋      | 39000/60000 [14:54:46<7:43:55,  1.33s/it][32m2026-02-22 02:45:28.918[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 39000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23630.01it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24522.07it/s]
+[32m2026-02-22 02:45:31.556[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.64 seconds[0ms]
+[32m2026-02-22 02:45:31.560[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.64 seconds[0m
+[32m2026-02-22 02:46:13.276[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 39000: 3.5156132578849792[0m
+Update steps:  67%|████████████      | 40000/60000 [15:17:37<7:23:27,  1.33s/it][32m2026-02-22 03:08:19.963[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m469[0m - [1mSaving model and optimizer to /data/checkpoint/OSD_350M/model_40000, update step 40000[0m
+[32m2026-02-22 03:09:33.847[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 40000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24071.69it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24450.46it/s]
+[32m2026-02-22 03:09:36.493[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.64 seconds[0ms]
+[32m2026-02-22 03:09:36.515[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.67 seconds[0m
+[32m2026-02-22 03:10:14.459[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 40000: 3.5143805742263794[0m
+Update steps:  68%|████████████▎     | 41000/60000 [15:41:39<6:58:53,  1.32s/it][32m2026-02-22 03:32:21.950[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 41000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23411.69it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23983.51it/s]
+[32m2026-02-22 03:32:24.489[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.54 seconds[0ms]
+[32m2026-02-22 03:32:24.492[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.54 seconds[0m
+[32m2026-02-22 03:33:07.011[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 41000: 3.513302206993103[0m
+Update steps:  70%|████████████▌     | 42000/60000 [16:04:32<6:35:18,  1.32s/it][32m2026-02-22 03:55:15.007[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 42000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23543.61it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24155.22it/s]
+[32m2026-02-22 03:55:17.581[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.57 seconds[0ms]
+[32m2026-02-22 03:55:17.585[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.58 seconds[0m
+[32m2026-02-22 03:55:59.708[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 42000: 3.5123401880264282[0m
+Update steps:  72%|████████████▉     | 43000/60000 [16:27:22<6:17:52,  1.33s/it][32m2026-02-22 04:18:05.578[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m505[0m - [1mPerforming evaluation at step 43000[0m
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 23599.89it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 24361.56it/s]
+[32m2026-02-22 04:18:08.245[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m91[0m - [1mLoaded validation dataset in 2.67 seconds[0ms]
+[32m2026-02-22 04:18:08.249[0m | [1mINFO    [0m | [36m__main__[0m:[36mevaluate_model[0m:[36m107[0m - [1mEval set prepared in 2.67 seconds[0m
+[32m2026-02-22 04:18:49.851[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m516[0m - [1mEval loss at step 43000: 3.5109938383102417[0m
+Update steps:  73%|█████████████▏    | 43753/60000 [16:44:46<5:57:05,  1.32s/it]
